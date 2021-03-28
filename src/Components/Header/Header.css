@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 120px;
+  padding: 0px 0px 0px 50px;
+  background-color: var(--bg-header);
+}
+
+.search {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  max-width: 70px;
+  margin-right: 48px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    padding: 0px 106px 0px 50px;
+  }
+}

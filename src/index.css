@@ -1,0 +1,27 @@
+/* CSS Imports */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap");
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors */
+:root {
+  --bg-header: #050417;
+  --bg-button: #2a2b8d;
+  --bg-input: #ffffff;
+  --bg-select-selected: #f2f3f7;
+  --text-button: #ffffff;
+  --text-input: #050417;
+  --text-input-placeholder: #d5d7e5;
+}
+
+/* Fonts */
+* {
+  font-family: "Open Sans", sans-serif;
+}

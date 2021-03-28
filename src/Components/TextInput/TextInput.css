@@ -1,0 +1,17 @@
+.textInput {
+  color: var(--text-input);
+  background-color: var(--bg-input);
+  width: 400px;
+  height: 50px;
+  padding-left: 22px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: var(--text-input-placeholder);
+}
