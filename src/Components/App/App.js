@@ -1,10 +1,15 @@
+import { ImageProvider } from "../../Context/ImageContext"
+import Gallery from "../Gallery/Gallery"
 import Header from "../Header/Header"
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-    </div>
+    <ImageProvider>
+      <div className="App">
+        <Header></Header>
+        <Gallery></Gallery>
+      </div>
+    </ImageProvider>
   )
 }
 

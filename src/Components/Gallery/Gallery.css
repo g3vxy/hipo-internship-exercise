@@ -1,0 +1,27 @@
+.gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: masonry; /* Experimental future in Firefox. */
+  margin: 50px 250px 0px 250px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 120px);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  width: calc(100vw - 500px);
+  height: 62px;
+  margin-left: 250px;
+  padding-left: 30px;
+  background-color: var(--bg-error);
+  color: var(--text-error);
+  font-weight: 600;
+}

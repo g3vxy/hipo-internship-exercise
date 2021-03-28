@@ -15,10 +15,12 @@
   --bg-header: #050417;
   --bg-button: #2a2b8d;
   --bg-input: #ffffff;
+  --bg-error: rgba(255, 74, 74, 0.1);
   --bg-select-selected: #f2f3f7;
   --text-button: #ffffff;
   --text-input: #050417;
   --text-input-placeholder: #d5d7e5;
+  --text-error: #ff4a4a;
 }
 
 /* Fonts */

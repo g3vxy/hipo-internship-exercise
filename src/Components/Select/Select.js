@@ -1,32 +1,34 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import "./Select.css"
 import Arrow from "../../Assets/Arrow.svg"
+import { ImageContext } from "../../Context/ImageContext"
 
 function Select({ options }) {
   const [toggle, setToggle] = useState(false)
-  const [selected, setSelected] = useState("")
+  const { collectionState } = useContext(ImageContext)
+  const [collection, setCollection] = collectionState
 
   useEffect(() => {
-    console.log(selected)
-  }, [selected])
+    console.log(collection)
+  }, [collection])
 
   return (
     <div className={`select ${toggle ? "toggled" : ""}`}>
       <div
         className={`placeholder ${toggle ? "toggled" : ""} ${
-          selected !== "" ? "selected" : ""
+          collection !== "" ? "selected" : ""
         }`}
         onClick={() => {
           setToggle(!toggle)
         }}
       >
-        <p>{`${selected === "" ? "Collections" : selected}`}</p>
+        <p>{`${collection === "" ? "Collections" : collection}`}</p>
         <img
           src={Arrow}
           alt="Arrow"
           onClick={(e) => {
             e.stopPropagation()
-            setSelected("")
+            setCollection("")
           }}
         ></img>
       </div>
@@ -38,7 +40,7 @@ function Select({ options }) {
               key={index}
               onClick={() => {
                 setToggle(!toggle)
-                setSelected(value)
+                setCollection(value)
               }}
               className="option"
             >
@@ -52,16 +54,3 @@ function Select({ options }) {
 }
 
 export default Select
-
-/*
-<select className="select">
-      <option value="Collection">Collection</option>
-      {options.map((value, index) => {
-        return (
-          <option key={index} value={value}>
-            {value}
-          </option>
-        )
-      })}
-</select>
-*/
