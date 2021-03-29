@@ -30,6 +30,7 @@ function Gallery() {
       fetch(url)
         .then((response) => response.json())
         .then((result) => {
+          console.log(result)
           writeToCache(url, result.results)
           setImages(Object.values(result.results))
           setIsLoading(!isLoading)

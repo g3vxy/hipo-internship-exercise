@@ -2,6 +2,7 @@
   display: column;
   columns: 3;
   margin: 50px 250px 0px 250px;
+  gap: 1em;
 }
 
 .galleryImage {

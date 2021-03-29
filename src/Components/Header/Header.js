@@ -3,14 +3,7 @@ import Logo from "../../Assets/Logo.svg"
 import SearchButton from "../SearchButton/SearchButton"
 import TextInput from "../TextInput/TextInput"
 import Select from "../Select/Select"
-
-const options = [
-  "Featured",
-  "Wallpapers",
-  "Nature",
-  "Textures & Patterns",
-  "Architecture",
-]
+import constants from "../../Utils/constants"
 
 function Header() {
   return (
@@ -18,7 +11,7 @@ function Header() {
       <img src={Logo} alt="Logo" className="logo"></img>
       <div className="search">
         <TextInput text="Query"></TextInput>
-        <Select options={options}></Select>
+        <Select options={constants.collections}></Select>
         <SearchButton text="SEARCH"></SearchButton>
       </div>
     </div>

@@ -22,7 +22,11 @@ function Select({ options }) {
           setToggle(!toggle)
         }}
       >
-        <p>{`${collection === "" ? "Collections" : collection}`}</p>
+        <p>{`${
+          collection === ""
+            ? "Collections"
+            : Object.keys(options).find((key) => options[key] === collection)
+        }`}</p>
         <img
           src={Arrow}
           alt="Arrow"
@@ -34,13 +38,13 @@ function Select({ options }) {
       </div>
       <div className={`shadow ${toggle ? "toggled" : ""}`}></div>
       <div className={`dropdown ${toggle ? "toggled" : ""}`}>
-        {options.map((value, index) => {
+        {Object.keys(options).map((value, index) => {
           return (
             <div
               key={index}
               onClick={() => {
                 setToggle(!toggle)
-                setCollection(value)
+                setCollection(options[value])
               }}
               className="option"
             >
