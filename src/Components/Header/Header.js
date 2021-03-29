@@ -1,6 +1,6 @@
 import "./Header.css"
 import Logo from "../../Assets/Logo.svg"
-import Button from "../Button/Button"
+import SearchButton from "../SearchButton/SearchButton"
 import TextInput from "../TextInput/TextInput"
 import Select from "../Select/Select"
 
@@ -19,7 +19,7 @@ function Header() {
       <div className="search">
         <TextInput text="Query"></TextInput>
         <Select options={options}></Select>
-        <Button text="SEARCH"></Button>
+        <SearchButton text="SEARCH"></SearchButton>
       </div>
     </div>
   )

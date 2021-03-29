@@ -1,9 +1,12 @@
 .gallery {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: masonry; /* Experimental future in Firefox. */
+  display: column;
+  columns: 3;
   margin: 50px 250px 0px 250px;
+}
+
+.galleryImage {
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .loading {
@@ -14,14 +17,37 @@
   height: calc(100vh - 120px);
 }
 
+.errorContainer {
+  display: flex;
+  width: 100vw;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .error {
   display: flex;
   align-items: center;
-  width: calc(100vw - 500px);
+  width: 60vw;
   height: 62px;
-  margin-left: 250px;
   padding-left: 30px;
   background-color: var(--bg-error);
   color: var(--text-error);
   font-weight: 600;
+}
+
+@supports (grid-template-rows: masonry) {
+  .gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: masonry; /* Experimental future in Firefox. */
+    justify-items: center;
+  }
+
+  .galleryImage {
+    cursor: pointer;
+    margin-top: 0px;
+  }
 }

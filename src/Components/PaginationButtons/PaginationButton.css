@@ -1,0 +1,16 @@
+.paginationButton {
+  background-color: var(--text-button);
+  color: var(--bg-button);
+  padding: 12px 30px 12px 30px;
+  margin-left: 10px;
+  border: 1px solid var(--text-input-placeholder);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.paginationButton.disabled {
+  opacity: 0.3;
+}
